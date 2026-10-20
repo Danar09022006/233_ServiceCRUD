@@ -77,6 +77,11 @@ app.put("/biodata/:id", (req, res) => {
     });
 });
 
+// DELETE (Hapus Data)
+app.delete("/biodata/:id", (req, res) => {
+  const { id } = req.params;
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
