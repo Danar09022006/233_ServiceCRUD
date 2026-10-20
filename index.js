@@ -31,3 +31,7 @@ app.get("/", (req, res, next) => {
       res.status(500).send("Error fetching data");
     });
 });
+
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
