@@ -46,6 +46,13 @@ app.post("/biodata", (req, res) => {
     .then((result) => res.json(result.rows[0]))
     .catch((err) => console.error(err));
 });
+
+// PUT (Update Data)
+app.put("/biodata/:id", (req, res) => {
+  const { id } = req.params;
+  const { nama, nim, kelas } = req.body;
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
